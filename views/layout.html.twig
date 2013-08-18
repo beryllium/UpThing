@@ -1,9 +1,14 @@
 <html>
 <head><title>{% block sub_title '' %}{% block title 'UpThing' %}</title></head>
+<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/app.css"/>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <body>
   <h1>UpThing</h1>
+  <div class="container">
   {% block body %}
     Welcome to UpThing!
   {% endblock %}
+  </div>
 </body>
 </html>
