@@ -6,22 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
-$app->get( '/', function() {
-    $upload_form = <<<EOF
-<html>
-<body>
-<form enctype="multipart/form-data" action="" method="POST">
-    <input type="hidden" name="MAX_FILE_SIZE" value="52428800" />
-    Upload this file:
-<br><br>
-<input name="image" type="file" />
-<br><br>
-    <input type="submit" value="Send File" />
-</form>
-</body>
-</html>
-EOF;
-    return $upload_form;
+$app->get( '/', function() use ( $app ) {
+    return $app['twig']->render('upload_form.html.twig');
 });
 
 $app->post('/', function( Request $request ) use ( $app ) {
@@ -41,30 +27,70 @@ $app->post('/', function( Request $request ) use ( $app ) {
     return print_r( $request->files, true );
 });
 
-$app->get('/img/{name}', function( $name, Request $request ) use ( $app ) {
-    if ( !file_exists( $app['upload_folder'] . '/' . $name ) )
+$app->get('/img/{name}/{size}', function( $name, $size, Request $request ) use ( $app ) {
+    $prefix = $app['upload_folder'].'/';
+    $full_name = $prefix . $name;
+
+    $thumb_name = '';
+    $thumb_width = 320;
+    $thumb_height = 240;
+
+    if ( !file_exists( $full_name ) )
     {
         throw new \Exception( 'File not found' );
     }
 
-    $out = new BinaryFileResponse($app['upload_folder'] . '/' . $name );
-
-    return $out;
-});
-
-$app->get('/view', function() use ( $app ) {
-    $images = glob($app['upload_folder'] . '/img*');
-
-    $out = '<html><body>';
-
-    foreach( $images as $img )
+    switch ( $size )
     {
-        $out .= '<img src="/upthing/web/index.php/img/' . basename($img) . '"><br><br>';
+    default:
+    case 'small':
+        $thumb_name = $prefix . 'small_' . $name . '.jpg';
+        $thumb_width = 320;
+        $thumb_height = 240;
+        break;
+
+    case 'medium':
+        $thumb_name = $prefix . 'medium_' . $name . '.jpg';
+        $thumb_width = 1024;
+        $thumb_height = 768;
+        break;
     }
 
-    $out .= '</body></html>';
+    $out = null;
+
+    if ( 'original' == $size )
+    {
+        $out = new BinaryFileResponse($full_name);
+    }
+    else
+    {
+        if ( !file_exists( $thumb_name ) )
+        {
+            $app['imagine']->open($full_name)
+                ->thumbnail(
+                    new Imagine\Image\Box($thumb_width,$thumb_height), 
+                    Imagine\Image\ImageInterface::THUMBNAIL_INSET)
+                ->save($thumb_name);
+        }
+
+        $out = new BinaryFileResponse($thumb_name);
+    }
 
     return $out;
+})
+->value('size', 'small');
+
+$app->get('/view', function() use ( $app ) {
+    $image_glob = glob($app['upload_folder'] . '/img*');
+
+    $images = array_map( 
+        function($val) { return basename( $img ); }, 
+        $image_glob 
+    );
+
+    return $app['twig']->render('gallery.html.twig',array(
+        'images' => $images,
+    ));
 });
 
 $app->run();

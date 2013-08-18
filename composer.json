@@ -2,7 +2,10 @@
     "name": "beryllium/up-thing",
     "description": "An intro to Composer and Silex, UpThing accepts image uploads and generates thumbnails",
     "require": {
-        "silex/silex": "*"
+        "silex/silex": "*",
+        "twig/twig": "1.*",
+        "imagine/imagine": "0.4.*",
+        "neutron/silex-imagine-provider": "0.1.*"
     },
     "license": "MIT",
     "authors": [

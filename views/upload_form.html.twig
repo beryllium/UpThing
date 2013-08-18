@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block sub_title 'Upload an Image - ' %}
+{% block body %}
+<h2>Upload an Image</h2>
+<form enctype="multipart/form-data" action="" method="POST">
+    <input type="hidden" name="MAX_FILE_SIZE" value="52428800" />
+<br>
+<input name="image" type="file" />
+<br><br>
+    <input type="submit" value="Send File" />
+</form>
+{% endblock body %}
