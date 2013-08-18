@@ -1,0 +1,15 @@
+{
+    "name": "beryllium/up-thing",
+    "description": "An intro to Composer and Silex, UpThing accepts image uploads and generates thumbnails",
+    "require": {
+        "silex/silex": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Boyd",
+            "email": "kevin.boyd@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
