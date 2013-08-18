@@ -8,7 +8,7 @@ $app = new Silex\Application();
 $app['debug'] = true; 
 $app['upload_folder'] = __DIR__ . '/uploads';
 
-$app->register(Silex\Provider\TwigServiceProvider(), array(
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/views',
 ));
 
