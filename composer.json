@@ -6,7 +6,7 @@
         "twig/twig": "1.*",
         "imagine/imagine": "0.4.*",
         "neutron/silex-imagine-provider": "0.1.*",
-        "twbs/bootstrap": "v3.0.0-rc2"
+        "twbs/bootstrap": "*"
     },
     "license": "MIT",
     "authors": [

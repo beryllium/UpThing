@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "faf72e3be830356d505eee40682361c6",
+    "hash": "e8b88ba44fa6557662c280fe1f754cc0",
     "packages": [
         {
             "name": "imagine/imagine",
@@ -557,16 +557,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v3.0.0-rc.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "v3.0.0-rc.2"
+                "reference": "af75dca908d672d7cc71fcf009b5c0a5f10aad06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/v3.0.0-rc.2",
-                "reference": "v3.0.0-rc.2",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/af75dca908d672d7cc71fcf009b5c0a5f10aad06",
+                "reference": "af75dca908d672d7cc71fcf009b5c0a5f10aad06",
                 "shasum": ""
             },
             "type": "library",
@@ -584,13 +584,13 @@
                     "email": "jacobthornton@gmail.com"
                 }
             ],
-            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
             "homepage": "http://getbootstrap.com",
             "keywords": [
                 "bootstrap",
                 "css"
             ],
-            "time": "2013-08-13 23:00:05"
+            "time": "2013-08-19 21:23:07"
         },
         {
             "name": "twig/twig",
