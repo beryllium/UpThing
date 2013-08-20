@@ -84,7 +84,7 @@ $app->get('/view', function() use ( $app ) {
     $image_glob = glob($app['upload_folder'] . '/img*');
 
     $images = array_map( 
-        function($val) { return basename( $img ); }, 
+        function($val) { return basename( $val ); }, 
         $image_glob 
     );
 
