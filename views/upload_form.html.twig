@@ -2,19 +2,23 @@
 
 {% block sub_title 'Upload an Image - ' %}
 {% block body %}
-<div class="jumbotron">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-10 col-md-10">
   <h2>Upload an Image</h2>
   <p>Choose an image to upload to the gallery.</p>
   <form enctype="multipart/form-data" action="" method="POST" class="form-inline" role="form">
     <input type="hidden" name="MAX_FILE_SIZE" value="52428800" />
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-8">
         <input name="image" type="file" class="form-control" />
       </div>
-      <div class="col-xs-6">
-        <button type="button" class="btn btn-primary">Initiate Upload &raquo;</button>
+      <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary" data-loading-text="Uploading ...">Initiate Upload &raquo;</button>
       </div>
     </div>
   </form>
+</div>
+</div>
 </div>
 {% endblock body %}
