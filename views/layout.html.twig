@@ -27,8 +27,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Upload</a></li>
-            <li><a href="/view">The Gallery</a></li>
+              <li {% block upload_nav %}class="active"{% endblock %}><a href="/">Upload</a></li>
+              <li {% block gallery_nav '' %}><a href="/view">The Gallery</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="http://whateverthing.com">About Whateverthing</a></li>
