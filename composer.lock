@@ -489,12 +489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "v2.3.3"
+                "reference": "41c9826457c65fa3cf746f214985b7ca9cba42f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.3.3",
-                "reference": "v2.3.3",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/41c9826457c65fa3cf746f214985b7ca9cba42f8",
+                "reference": "41c9826457c65fa3cf746f214985b7ca9cba42f8",
                 "shasum": ""
             },
             "require": {
@@ -768,12 +768,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "af75dca908d672d7cc71fcf009b5c0a5f10aad06"
+                "reference": "924e9e74506464203ef077a3019e46af8a9a2f71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/af75dca908d672d7cc71fcf009b5c0a5f10aad06",
-                "reference": "af75dca908d672d7cc71fcf009b5c0a5f10aad06",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/924e9e74506464203ef077a3019e46af8a9a2f71",
+                "reference": "924e9e74506464203ef077a3019e46af8a9a2f71",
                 "shasum": ""
             },
             "type": "library",
@@ -797,7 +797,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2013-08-19 21:23:07"
+            "time": "2013-08-20 23:34:57"
         },
         {
             "name": "twig/twig",
