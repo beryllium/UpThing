@@ -4,11 +4,13 @@ require __DIR__ . '/../bootstrap.php';
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 $app->get( '/', function() use ( $app ) {
     return $app['twig']->render('upload_form.html.twig');
-});
+})
+->bind('upload_form');
 
 $app->post('/', function( Request $request ) use ( $app ) {
     $file_bag = $request->files;
@@ -22,10 +24,11 @@ $app->post('/', function( Request $request ) use ( $app ) {
         );
     }
 
-    // This is just temporary.
-    // Replace with a RedirectResponse to Gallery
-    return print_r( $request->files, true );
-});
+    // TODO: Set a flash notice to let the user know the upload was successful
+
+    return new RedirectResponse($app['url_generator']->generate('gallery'));
+})
+->bind('upload_post');
 
 $app->get('/img/{name}/{size}', function( $name, $size, Request $request ) use ( $app ) {
     $prefix = $app['upload_folder'].'/';
@@ -78,7 +81,8 @@ $app->get('/img/{name}/{size}', function( $name, $size, Request $request ) use (
 
     return $out;
 })
-->value('size', 'small');
+->value('size', 'small')
+->bind('img');
 
 $app->get('/view', function() use ( $app ) {
     $image_glob = glob($app['upload_folder'] . '/img*');
@@ -91,6 +95,7 @@ $app->get('/view', function() use ( $app ) {
     return $app['twig']->render('gallery.html.twig',array(
         'images' => $images,
     ));
-});
+})
+->bind('gallery');
 
 $app->run();
