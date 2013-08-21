@@ -18,10 +18,15 @@ $app->post('/', function( Request $request ) use ( $app ) {
     if ( $file_bag->has('image') )
     {
         $image = $file_bag->get('image');
-        $image->move(
-            $app['upload_folder'], 
-            tempnam($app['upload_folder'],'img_')
-        );
+        if ( !empty($image) && $image->isValid() )
+        {
+            $image->move(
+                $app['upload_folder'], 
+                tempnam($app['upload_folder'],'img_')
+            );
+        } else {
+            // We have an error!
+        }
     }
 
     // TODO: Set a flash notice to let the user know the upload was successful
