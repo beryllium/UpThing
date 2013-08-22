@@ -2,13 +2,18 @@
 
 {% block title 'Image Gallery - ' %}
 
+{% block upload_nav '' %}
+{% block gallery_nav %}class="active"{% endblock %}
+
 {% block body %}
     <h2>Image Gallery</h2>
+    <hr>
     {% for item in images %}
-        <img src="{{ app.request.baseUrl }}/img/{{ item }}"><br>
+        <img src="{{ app.request.baseUrl }}/img/{{ item }}" class="img-thumbnail">
     {% else %}
         <p><strong>Sorry, no images were found.</strong></p>
     {% endfor %}
     <br><br>
-    <a href="{{ app.request.baseUrl }}/">Upload some images &raquo;</a>
+    <hr>
+    <a href="{{ app.request.baseUrl }}/" class="btn btn-primary">Upload some images &raquo;</a>
 {% endblock %}

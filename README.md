@@ -5,13 +5,15 @@ An intro to Composer and Silex that can accept image uploads and generate thumbn
 
 This project is tied to the "Quick Web Apps" series of articles on [Whateverthing.com](http://whateverthing.com), created by Kevin Boyd.
 
+To give this code a spin, use [Composer](http://getcomposer.org) to install the dependencies (and then make sure to place symbolic links for components/ and vendor/twbs/bootstrap in the web/ folder - this part isn't automated yet. Hopefully soon I will find a better solution), then either use the internal PHP web server or set up an apache/nginx virtual host to test it out.
+
 ### &raquo; [Quick Web Apps with Composer and Silex, Part One](http://whateverthing.com/blog/2013/06/28/quick-web-apps-part-one/)
 
 Part One of the series deals with what is essentially a Hello World reference implementation, albeit with a slightly entertaining twist.
 
 The user is introduced to the "composer init" and "composer install" commands, as well as creating a Bootstrap file for Silex and a front controller for their web-enabled routes.
 
-Part One source code is available in the 0.1.x branch.
+Part One source code is available in the 0.1 branch.
 
 ### &raquo; [Quick Web Apps with Composer and Silex, Part Two](http://whateverthing.com/blog/2013/06/30/quick-web-apps-part-two/)
 
@@ -19,7 +21,7 @@ Part Two of the series expands on the default route, by adding File Upload funct
 
 The code in this example is not ideal - in fact, it would serve as an excellent jumping off point for a guide on refactoring web code that is difficult to maintain.
 
-Part Two source code is available in the 0.2.x branch.
+Part Two source code is available in the 0.2 branch.
 
 ### &raquo; [Quick Web Apps with Composer and Silex, Part Three](http://whateverthing.com/blog/2013/07/01/quick-web-apps-part-three/)
 
@@ -27,7 +29,15 @@ Part Three of the series addresses some of the most egregious shortcomings of Pa
 
 The code in this example is slightly better than the previous parts, but it's still not 100% awesome. On the plus side, users are introduced to the "composer require" command, which is handy during development for pulling in new packages for your projects. 
 
-Part Three source code is available in the 0.3.x branch.
+Part Three source code is available in the 0.3 branch.
+
+### &raquo; [Bootstrap 3: Quick Observations and a Demonstration]()
+
+This is a de facto Part Four for the Quick Web Apps series, although I glossed over the particulars of the implementation. It's not so much a how-to as it is a review of Bootstrap.
+
+This part also marks the addition of the code to GitHub so anyone can check it out and fork it if they want. At this stage of development, I'd recommend not using it in production, however :)
+
+Part Four source code is available in the 0.4 branch.
 
 ---
 

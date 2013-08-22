@@ -5,7 +5,9 @@
         "silex/silex": "*",
         "twig/twig": "1.*",
         "imagine/imagine": "0.4.*",
-        "neutron/silex-imagine-provider": "0.1.*"
+        "neutron/silex-imagine-provider": "0.1.*",
+        "twbs/bootstrap": "*",
+        "components/jquery": "*"
     },
     "license": "MIT",
     "authors": [
