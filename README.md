@@ -31,7 +31,7 @@ The code in this example is slightly better than the previous parts, but it's st
 
 Part Three source code is available in the 0.3 branch.
 
-### &raquo; [Bootstrap 3: Quick Observations and a Demonstration]()
+### &raquo; [Bootstrap 3: Quick Observations and a Demonstration](http://whateverthing.com/blog/2013/08/21/bootstrap-3-demonstration/)
 
 This is a de facto Part Four for the Quick Web Apps series, although I glossed over the particulars of the implementation. It's not so much a how-to as it is a review of Bootstrap.
 
