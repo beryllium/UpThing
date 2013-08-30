@@ -103,4 +103,7 @@ $app->get('/view', function() use ( $app ) {
 })
 ->bind('gallery');
 
-$app->run();
+if ('test' == $app['env'])
+    return $app;
+else
+    $app->run();
