@@ -12,7 +12,8 @@
     "require-dev": {
         "symfony/browser-kit": ">=2.3,<2.4-dev",
         "symfony/css-selector": "*",
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit": "3.7.*",
+        "knplabs/gaufrette": "*"
     },
     "license": "MIT",
     "authors": [

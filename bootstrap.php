@@ -2,6 +2,11 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+use Gaufrette\Filesystem;
+use Gaufrette\StreamWrapper;
+use Gaufrette\Adapter\Local as LocalAdapter;
+use Gaufrette\Adapter\InMemory as InMemoryAdapter;
+
 $app = new Silex\Application();
 
 // Detect environment (default: prod) by checking for the existence of $app_env
@@ -14,7 +19,24 @@ else
 // WARNING: Disable this setting in production. Set it to false.
 $app['debug'] = true; 
 
-$app['upload_folder'] = __DIR__ . '/uploads';
+// Configuring the filesystem based on environment
+if ('test' == $app['env'])
+{
+    $app['upthing.adapter'] = new InMemoryAdapter();
+}
+else
+{
+    $app['upthing.adapter'] = new LocalAdapter(__DIR__ . '/uploads');
+}
+
+$app['upthing.filesystem'] = new Filesystem($app['upthing.adapter']);
+
+$map = StreamWrapper::getFilesystemMap();
+$map->set('upthing', $app['upthing.filesystem']);
+
+StreamWrapper::register();
+
+$app['upthing.storage'] = 'gaufrette://upthing/';
 
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
