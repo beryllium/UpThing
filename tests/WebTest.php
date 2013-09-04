@@ -54,8 +54,8 @@ class WebTest extends WebTestCase {
 
         // Test retrieval of original image
         $crawler = $client->request('GET', $img_url[0] . '/original');
-        $md5_test = md5(file_get_contents($test_image));
-        $md5_result = md5(file_get_contents($client->getResponse()->getFile()));
+        $md5_test = md5_file($test_image);
+        $md5_result = md5_file($client->getResponse()->getFile());
         $this->assertEquals(
             $md5_test, 
             $md5_result, 
