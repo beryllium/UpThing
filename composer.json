@@ -6,8 +6,12 @@
         "twig/twig": "1.*",
         "imagine/imagine": "0.4.*",
         "neutron/silex-imagine-provider": "0.1.*",
-        "twbs/bootstrap": "*",
+        "components/bootstrap": "3.*",
         "components/jquery": "*"
+    },
+    "config":
+    {
+        "component-dir": "web/components"
     },
     "license": "MIT",
     "authors": [

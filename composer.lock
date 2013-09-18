@@ -3,20 +3,75 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "40c4833fde6b143d20766bad52f923b2",
+    "hash": "fd721493c872746b8aff69b34dafa19f",
     "packages": [
+        {
+            "name": "components/bootstrap",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/bootstrap.git",
+                "reference": "2207fc66e5d4194967287bdc8517150b7cc9d85d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/bootstrap/zipball/2207fc66e5d4194967287bdc8517150b7cc9d85d",
+                "reference": "2207fc66e5d4194967287bdc8517150b7cc9d85d",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.9"
+            },
+            "suggest": {
+                "components/bootstrap-default": "Provide a theme for Bootstrap as components/bootstrap only provides the CSS as file assets"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "js/bootstrap.js"
+                    ],
+                    "files": [
+                        "js/bootstrap.min.js",
+                        "css/*.css",
+                        "fonts/*"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "jquery"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Twitter, Inc"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "homepage": "http://twitter.github.com/bootstrap/",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2013-08-31 14:21:43"
+        },
         {
             "name": "components/jquery",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "2.0.3"
+                "reference": "a878230178000f417d78357ebac9fe738b870791"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/2.0.3",
-                "reference": "2.0.3",
+                "url": "https://api.github.com/repos/components/jquery/zipball/a878230178000f417d78357ebac9fe738b870791",
+                "reference": "a878230178000f417d78357ebac9fe738b870791",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +103,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2013-07-12 08:48:34"
+            "time": "2013-09-14 14:43:35"
         },
         {
             "name": "imagine/imagine",
@@ -103,12 +158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "f9f754dc7524acd6daf0bf510d22c055b4967e08"
+                "reference": "e0646fa52937c4e5ce61ce089ada28c509b01b40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/f9f754dc7524acd6daf0bf510d22c055b4967e08",
-                "reference": "f9f754dc7524acd6daf0bf510d22c055b4967e08",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/e0646fa52937c4e5ce61ce089ada28c509b01b40",
+                "reference": "e0646fa52937c4e5ce61ce089ada28c509b01b40",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +221,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-07-11 15:56:23"
+            "time": "2013-09-03 12:45:02"
         },
         {
             "name": "neutron/silex-imagine-provider",
@@ -221,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Pimple.git",
-                "reference": "v1.0.2"
+                "reference": "dd112b96b5836f896b01d344c85de1ed7140c334"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/v1.0.2",
-                "reference": "v1.0.2",
+                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/dd112b96b5836f896b01d344c85de1ed7140c334",
+                "reference": "dd112b96b5836f896b01d344c85de1ed7140c334",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +290,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -259,7 +314,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2013-03-08 08:21:40"
+            "time": "2013-08-29 06:29:11"
         },
         {
             "name": "psr/log",
@@ -305,15 +360,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobLoach/component-installer.git",
-                "reference": "8f90ead86200e222f43fc8ff6f2d00ccb43380d3"
+                "reference": "c2e456e7644885f786169e52f590719aa5a8a7d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/8f90ead86200e222f43fc8ff6f2d00ccb43380d3",
-                "reference": "8f90ead86200e222f43fc8ff6f2d00ccb43380d3",
+                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/c2e456e7644885f786169e52f590719aa5a8a7d8",
+                "reference": "c2e456e7644885f786169e52f590719aa5a8a7d8",
                 "shasum": ""
             },
             "require": {
+                "composer-plugin-api": "1.0.0",
                 "kriswallsmith/assetic": "1.*",
                 "php": ">=5.3.2"
             },
@@ -341,7 +397,7 @@
                 }
             ],
             "description": "Allows installation of Components via Composer.",
-            "time": "2013-07-04 16:57:49"
+            "time": "2013-09-08 14:10:00"
         },
         {
             "name": "silex/silex",
@@ -349,49 +405,49 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "9b9bc73e993cc0f5cf26f41e464769bac329831f"
+                "reference": "32c1be4a35478df530d671bdb9e9eab19b8a1809"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/9b9bc73e993cc0f5cf26f41e464769bac329831f",
-                "reference": "9b9bc73e993cc0f5cf26f41e464769bac329831f",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/32c1be4a35478df530d671bdb9e9eab19b8a1809",
+                "reference": "32c1be4a35478df530d671bdb9e9eab19b8a1809",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "pimple/pimple": "1.*",
-                "symfony/event-dispatcher": ">=2.3,<2.4-dev",
-                "symfony/http-foundation": ">=2.3,<2.4-dev",
-                "symfony/http-kernel": ">=2.3,<2.4-dev",
-                "symfony/routing": ">=2.3,<2.4-dev"
+                "symfony/event-dispatcher": ">=2.3,<2.5-dev",
+                "symfony/http-foundation": ">=2.3,<2.5-dev",
+                "symfony/http-kernel": ">=2.3,<2.5-dev",
+                "symfony/routing": ">=2.3,<2.5-dev"
             },
             "require-dev": {
                 "doctrine/dbal": ">=2.2.0,<2.4.0-dev",
                 "monolog/monolog": "~1.4,>=1.4.1",
                 "phpunit/phpunit": "~3.7",
                 "swiftmailer/swiftmailer": "5.*",
-                "symfony/browser-kit": ">=2.3,<2.4-dev",
-                "symfony/config": ">=2.3,<2.4-dev",
-                "symfony/css-selector": ">=2.3,<2.4-dev",
-                "symfony/dom-crawler": ">=2.3,<2.4-dev",
-                "symfony/finder": ">=2.3,<2.4-dev",
-                "symfony/form": ">=2.3,<2.4-dev",
-                "symfony/locale": ">=2.3,<2.4-dev",
-                "symfony/monolog-bridge": ">=2.3,<2.4-dev",
-                "symfony/options-resolver": ">=2.3,<2.4-dev",
-                "symfony/process": ">=2.3,<2.4-dev",
-                "symfony/security": ">=2.3,<2.4-dev",
-                "symfony/serializer": ">=2.3,<2.4-dev",
-                "symfony/translation": ">=2.3,<2.4-dev",
-                "symfony/twig-bridge": ">=2.3,<2.4-dev",
-                "symfony/validator": ">=2.3,<2.4-dev",
+                "symfony/browser-kit": ">=2.3,<2.5-dev",
+                "symfony/config": ">=2.3,<2.5-dev",
+                "symfony/css-selector": ">=2.3,<2.5-dev",
+                "symfony/dom-crawler": ">=2.3,<2.5-dev",
+                "symfony/finder": ">=2.3,<2.5-dev",
+                "symfony/form": ">=2.3,<2.5-dev",
+                "symfony/locale": ">=2.3,<2.5-dev",
+                "symfony/monolog-bridge": ">=2.3,<2.5-dev",
+                "symfony/options-resolver": ">=2.3,<2.5-dev",
+                "symfony/process": ">=2.3,<2.5-dev",
+                "symfony/security": ">=2.3,<2.5-dev",
+                "symfony/serializer": ">=2.3,<2.5-dev",
+                "symfony/translation": ">=2.3,<2.5-dev",
+                "symfony/twig-bridge": ">=2.3,<2.5-dev",
+                "symfony/validator": ">=2.3,<2.5-dev",
                 "twig/twig": ">=1.8.0,<2.0-dev"
             },
             "suggest": {
-                "symfony/browser-kit": ">=2.3,<2.4-dev",
-                "symfony/css-selector": ">=2.3,<2.4-dev",
-                "symfony/dom-crawler": ">=2.3,<2.4-dev",
-                "symfony/form": ">=2.3,<2.4-dev"
+                "symfony/browser-kit": ">=2.3,<2.5-dev",
+                "symfony/css-selector": ">=2.3,<2.5-dev",
+                "symfony/dom-crawler": ">=2.3,<2.5-dev",
+                "symfony/form": ">=2.3,<2.5-dev"
             },
             "type": "library",
             "extra": {
@@ -424,7 +480,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-08-15 10:40:03"
+            "time": "2013-09-15 10:09:51"
         },
         {
             "name": "symfony/debug",
@@ -433,12 +489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "3d3e055600a87ad39f60ac49f4af2166770adf15"
+                "reference": "af5033bc37aae356ab04b0f581795d60262fd77e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/3d3e055600a87ad39f60ac49f4af2166770adf15",
-                "reference": "3d3e055600a87ad39f60ac49f4af2166770adf15",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/af5033bc37aae356ab04b0f581795d60262fd77e",
+                "reference": "af5033bc37aae356ab04b0f581795d60262fd77e",
                 "shasum": ""
             },
             "require": {
@@ -449,7 +505,6 @@
                 "symfony/http-kernel": "~2.1"
             },
             "suggest": {
-                "symfony/class-loader": "",
                 "symfony/http-foundation": "",
                 "symfony/http-kernel": ""
             },
@@ -480,21 +535,21 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-14 13:08:25"
+            "time": "2013-09-13 12:20:47"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "2.3.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "41c9826457c65fa3cf746f214985b7ca9cba42f8"
+                "reference": "f86ac04039d0f529ef5ad572b9014453975bc3ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/41c9826457c65fa3cf746f214985b7ca9cba42f8",
-                "reference": "41c9826457c65fa3cf746f214985b7ca9cba42f8",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/f86ac04039d0f529ef5ad572b9014453975bc3ad",
+                "reference": "f86ac04039d0f529ef5ad572b9014453975bc3ad",
                 "shasum": ""
             },
             "require": {
@@ -510,7 +565,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -534,21 +589,21 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-07-21 12:12:18"
+            "time": "2013-09-13 15:15:57"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "2.3.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "ad778df4e7af3cfb9151eeeeb8b9823d47a2d72f"
+                "reference": "d0220419ef30dffd06de823150256008e132ef26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/ad778df4e7af3cfb9151eeeeb8b9823d47a2d72f",
-                "reference": "ad778df4e7af3cfb9151eeeeb8b9823d47a2d72f",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/d0220419ef30dffd06de823150256008e132ef26",
+                "reference": "d0220419ef30dffd06de823150256008e132ef26",
                 "shasum": ""
             },
             "require": {
@@ -557,7 +612,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -584,21 +639,21 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-17 16:34:49"
+            "time": "2013-09-13 12:20:47"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "2.3.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "b77ad515a2bb8d81f029b8af23135e8fb151de9f"
+                "reference": "76852a611322e2f65904c25f089a47f2f2857cfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/b77ad515a2bb8d81f029b8af23135e8fb151de9f",
-                "reference": "b77ad515a2bb8d81f029b8af23135e8fb151de9f",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/76852a611322e2f65904c25f089a47f2f2857cfd",
+                "reference": "76852a611322e2f65904c25f089a47f2f2857cfd",
                 "shasum": ""
             },
             "require": {
@@ -606,7 +661,7 @@
                 "psr/log": "~1.0",
                 "symfony/debug": "~2.3",
                 "symfony/event-dispatcher": "~2.1",
-                "symfony/http-foundation": "~2.2"
+                "symfony/http-foundation": "~2.4"
             },
             "require-dev": {
                 "symfony/browser-kit": "~2.2",
@@ -631,7 +686,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -655,7 +710,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-15 17:08:02"
+            "time": "2013-09-13 12:20:47"
         },
         {
             "name": "symfony/process",
@@ -664,12 +719,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "a5f3e6456af26ca5406ab970afe4155648443c8b"
+                "reference": "ba3568aae3622076b26f35f97aa3033a4cab7798"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/a5f3e6456af26ca5406ab970afe4155648443c8b",
-                "reference": "a5f3e6456af26ca5406ab970afe4155648443c8b",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/ba3568aae3622076b26f35f97aa3033a4cab7798",
+                "reference": "ba3568aae3622076b26f35f97aa3033a4cab7798",
                 "shasum": ""
             },
             "require": {
@@ -702,21 +757,21 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-15 17:09:02"
+            "time": "2013-09-12 12:59:51"
         },
         {
             "name": "symfony/routing",
-            "version": "2.3.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "023071a9ab677d0a8f1732dec970529cfa45fe3d"
+                "reference": "bec9a3cfe1f30d60b9fc81a124b635e5d679e081"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/023071a9ab677d0a8f1732dec970529cfa45fe3d",
-                "reference": "023071a9ab677d0a8f1732dec970529cfa45fe3d",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/bec9a3cfe1f30d60b9fc81a124b635e5d679e081",
+                "reference": "bec9a3cfe1f30d60b9fc81a124b635e5d679e081",
                 "shasum": ""
             },
             "require": {
@@ -736,7 +791,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -760,44 +815,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-13 20:18:00"
-        },
-        {
-            "name": "twbs/bootstrap",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "924e9e74506464203ef077a3019e46af8a9a2f71"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/924e9e74506464203ef077a3019e46af8a9a2f71",
-                "reference": "924e9e74506464203ef077a3019e46af8a9a2f71",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                },
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                }
-            ],
-            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
-            "homepage": "http://getbootstrap.com",
-            "keywords": [
-                "bootstrap",
-                "css"
-            ],
-            "time": "2013-08-20 23:34:57"
+            "time": "2013-09-06 18:21:06"
         },
         {
             "name": "twig/twig",
@@ -805,12 +823,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "fcf007e9a2e6c65594360ae7fa3c410ae8d56a11"
+                "reference": "0d97eb95288c6f08d5c46e9aa5706f2341a34e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/fcf007e9a2e6c65594360ae7fa3c410ae8d56a11",
-                "reference": "fcf007e9a2e6c65594360ae7fa3c410ae8d56a11",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/0d97eb95288c6f08d5c46e9aa5706f2341a34e29",
+                "reference": "0d97eb95288c6f08d5c46e9aa5706f2341a34e29",
                 "shasum": ""
             },
             "require": {
@@ -846,7 +864,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-08-07 12:53:34"
+            "time": "2013-09-17 13:39:25"
         }
     ],
     "packages-dev": [
