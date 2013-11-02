@@ -7,6 +7,9 @@ This project is tied to the "Quick Web Apps" series of articles on [Whateverthin
 
 To give this code a spin, use [Composer](http://getcomposer.org) to install the dependencies (and then make sure to place symbolic links for components/ and vendor/twbs/bootstrap in the web/ folder - this part isn't automated yet. Hopefully soon I will find a better solution), then either use the internal PHP web server or set up an apache/nginx virtual host to test it out.
 
+[![Build Status](https://travis-ci.org/beryllium/UpThing.png)](https://travis-ci.org/beryllium/UpThing)
+
+
 ### &raquo; [Quick Web Apps with Composer and Silex, Part One](http://whateverthing.com/blog/2013/06/28/quick-web-apps-part-one/)
 
 Part One of the series deals with what is essentially a Hello World reference implementation, albeit with a slightly entertaining twist.
